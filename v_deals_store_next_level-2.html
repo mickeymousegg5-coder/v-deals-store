@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4f1ca8">
+<meta name="description" content="V Deals Store par fashion, home aur gadgets ke popular deals ek jagah explore karein.">
+<title>V Deals Store | Flipkart + Meesho Finds</title>
+<style>
+:root{--purple:#5422ad;--purple2:#7c3aed;--ink:#211a2d;--muted:#756d82;--bg:#f7f5fb;--line:#ece7f3;--white:#fff;--green:#16834a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+a{color:inherit}.topbar{background:#29134c;color:#eee7ff;text-align:center;padding:8px 12px;font-size:12px}
+header{background:linear-gradient(120deg,#38146f,#6c32c5 62%,#8b5cf6);color:#fff;padding:18px 16px 34px}
+.nav,.hero,.main,.footer-inner{max-width:1120px;margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-weight:950;font-size:24px;letter-spacing:-.8px}.brand b{color:#facc15}.navlinks{display:flex;gap:18px;font-size:13px}.navlinks a{text-decoration:none;color:#f1eaff}
+.hero{padding:42px 0 6px;display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.5px;color:#e9d5ff;text-transform:uppercase}
+h1{font-size:clamp(31px,5vw,51px);line-height:1.08;margin:10px 0 12px;letter-spacing:-1.5px}
+.hero p{color:#eee5ff;line-height:1.6;max-width:580px;margin:0}
+.hero-art{background:#ffffff18;border:1px solid #ffffff30;border-radius:24px;padding:22px;text-align:center;box-shadow:0 16px 40px #1e0b4430}
+.bubbles{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.bubble{background:#fff;color:#5422ad;border-radius:17px;padding:16px;font-size:31px;min-width:82px}
+.hero-art strong{display:block;margin-top:14px}.hero-art small{color:#eee5ff}
+.main{padding:22px 16px 45px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:-4px 0 22px}
+.trust div{background:white;border:1px solid var(--line);border-radius:14px;padding:13px;font-size:12px;color:var(--muted)}
+.trust b{display:block;color:var(--ink);font-size:13px;margin-bottom:3px}
+.tools{display:flex;gap:10px;margin:0 0 14px}.search{flex:1;position:relative}.search input{width:100%;border:1px solid #e4deed;background:white;border-radius:13px;padding:14px 15px;font-size:15px;outline-color:var(--purple)}
+select{border:1px solid #e4deed;background:#fff;border-radius:13px;padding:0 12px;color:var(--ink);max-width:145px}
+.filters{display:flex;gap:8px;overflow:auto;padding:2px 0 18px}.filter{border:1px solid #e4deed;background:white;color:#51475f;border-radius:30px;padding:9px 15px;white-space:nowrap;cursor:pointer}.filter.active{background:var(--purple);border-color:var(--purple);color:#fff}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin:6px 0 14px}.section-head h2{font-size:22px;margin:0}.section-head p{font-size:12px;color:var(--muted);margin:4px 0 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;position:relative;transition:transform .18s,box-shadow .18s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #28104b12}
+.product-visual{height:138px;display:grid;place-items:center;font-size:51px;background:linear-gradient(135deg,#eee8ff,#faf2ff);position:relative}
+.store-pill{position:absolute;left:9px;top:9px;background:#fff;border-radius:20px;padding:5px 8px;font-size:10px;font-weight:800;color:#5b21b6}
+.wish{position:absolute;right:9px;top:8px;border:0;background:#fff;border-radius:50%;width:30px;height:30px;font-size:17px;cursor:pointer}
+.card-body{padding:12px}.cat{color:var(--purple);font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.7px}.card h3{font-size:14px;line-height:1.35;margin:6px 0;min-height:38px}
+.price{font-size:18px;font-weight:900}.old{font-size:11px;color:#948b9f;text-decoration:line-through;font-weight:500;margin-left:5px}
+.meta{font-size:11px;color:var(--muted);margin:6px 0 11px;min-height:14px}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--purple);color:#fff;padding:11px 8px;border-radius:10px;font-size:12px;font-weight:800}
+.buy:hover{background:#3d167f}.empty{display:none;text-align:center;padding:36px;color:var(--muted);background:#fff;border-radius:16px}
+.disclosure{background:#fff8e6;border:1px solid #f3dfa7;border-radius:14px;padding:13px 15px;margin:22px 0 0;font-size:12px;line-height:1.55;color:#5e4b22}
+.how{margin-top:30px}.how h2{font-size:21px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px}.step span{font-size:23px}.step b{display:block;margin:7px 0 4px;font-size:13px}.step p{font-size:12px;color:var(--muted);line-height:1.5;margin:0}
+footer{background:#211333;color:#e9e1f4;padding:25px 16px;font-size:12px;line-height:1.7}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner p{max-width:720px;margin:6px 0;color:#cfc2df}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#25153b;color:#fff;padding:11px 16px;border-radius:25px;font-size:12px;display:none;z-index:4;box-shadow:0 5px 20px #0003}
+@media(max-width:650px){.hero{grid-template-columns:1fr;padding-top:30px}.hero-art{display:none}.navlinks{gap:10px;font-size:11px}.trust{grid-template-columns:1fr 1fr}.trust div:last-child{display:none}.tools{flex-direction:column}.tools select{max-width:none;padding:13px}.steps{grid-template-columns:1fr}.product-visual{height:120px}.main{padding-left:12px;padding-right:12px}}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.product-visual{height:165px}.card-body{padding:15px}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="topbar">V Deals Store — smart shopping finds, all in one place</div>
+<header>
+ <div class="nav">
+  <div class="brand">V <b>DEALS</b> STORE</div>
+  <nav class="navlinks"><a href="#products">Products</a><a href="#how">How it works</a><a href="#about">About</a></nav>
+ </div>
+ <div class="hero">
+  <div><div class="eyebrow">Discover • Compare • Shop</div><h1>Achhe deals,<br>ek hi jagah ✨</h1><p>Fashion, home essentials aur gadgets ke selected products explore karo. Pasand aaye toh seller ke page par jaakar details check karo.</p></div>
+  <div class="hero-art"><div class="bubbles"><div class="bubble">👕</div><div class="bubble">🏠</div><div class="bubble">🎧</div></div><strong>Flipkart + Meesho picks</strong><small>Alag stores ke options ek jagah</small></div>
+ </div>
+</header>
+<main class="main">
+ <section class="trust"><div><b>🛍️ Multiple stores</b>Flipkart aur Meesho picks</div><div><b>🔎 Easy discovery</b>Search aur category filters</div><div><b>🔗 Seller checkout</b>Purchase seller ki site par</div></section>
+ <div class="tools"><div class="search"><input id="search" type="search" placeholder="Kya dhoondh rahe ho? e.g. speaker, bag..." aria-label="Search products"></div><select id="sort" aria-label="Sort products"><option value="default">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option></select></div>
+ <nav class="filters"><button class="filter active" data-cat="All">All products</button><button class="filter" data-cat="Fashion">Fashion</button><button class="filter" data-cat="Home">Home</button><button class="filter" data-cat="Gadgets">Gadgets</button><button class="filter" data-cat="Beauty">Beauty</button></nav>
+ <div class="section-head" id="products"><div><h2>Popular picks</h2><p>Demo catalogue — real seller links add karne baaki hain</p></div><small id="count">8 products</small></div>
+ <section class="grid" id="grid">
+  <article class="card" data-cat="Fashion" data-name="casual everyday backpack" data-price="599"><div class="product-visual">🎒<span class="store-pill">Flipkart</span><button class="wish" aria-label="Save product">♡</button></div><div class="card-body"><div class="cat">Fashion</div><h3>Casual Everyday Backpack</h3><div class="price">₹599 <span class="old">₹999</span></div><div class="meta">Everyday carry • Sample listing</div><a class="buy" href="#" data-demo>View on seller site ↗</a></div></article>
+  <article class="card" data-cat="Home" data-name="decorative table lamp" data-price="449"><div class="product-visual">💡<span class="store-pill">Meesho</span><button class="wish" aria-label="Save product">♡</button></div><div class="card-body"><div class="cat">Home</div><h3>Decorative Table Lamp</h3><div class="price">₹449 <span class="old">₹699</span></div><div class="meta">Room decor • Sample listing</div><a class="buy" href="#" data-demo>View on seller site ↗</a></div></article>
+  <article class="card" data-cat="Gadgets" data-name="wireless bluetooth speaker" data-price="799"><div class="product-visual">🔊<span class="store-pill">Flipkart</span><button class="wish" aria-label="Save product">♡</button></div><div class="card-body"><div class="cat">Gadgets</div><h3>Wireless Bluetooth Speaker</h3><div class="price">₹799 <span class="old">₹1,299</span></div><div class="meta">Audio • Sample listing</div><a class="buy" href="#" data-demo>View on seller site ↗</a></div></article>
+  <article class="card" data-cat="Beauty" data-name="skincare organiser pouch" data-price="199"><div class="product-visual">🧴<span class="store-pill">Meesho</span><button class="wish" aria-label="Save product">♡</button></div><div class="card-body"><div class="cat">Beauty</div><h3>Skincare Organiser Pouch</h3><div class="price">₹199 <span class="old">₹349</span></div><div class="meta">Storage • Sample listing</div><a class="buy" href="#" data-demo>View on seller site ↗</a></div></article>
+  <article class="card" data-cat="Home" data-name="kitchen storage containers" data-price="299"><div class="product-visual">🍱<span class="store-pill">Flipkart</span><button class="wish" aria-label="Save product">♡</button></div><div class="card-body"><div class="cat">Home</div><h3>Kitchen Storage Containers</h3><div class="price">₹299 <span class="old">₹499</span></div><div class="meta">Kitchen • Sample listing</div><a class="buy" href="#" data-demo>View on seller site ↗</a></div></article>
+  <article class="card" data-cat="Fashion" data-name="minimal wrist watch" data-price="399"><div class="product-visual">⌚<span class="store-pill">Meesho</span><button class="wish" aria-label="Save product">♡</button></div><div class="card-body"><div class="cat">Fashion</div><h3>Minimal Wrist Watch</h3><div class="price">₹399 <span class="old">₹799</span></div><div class="meta">Accessories • Sample listing</div><a class="buy" href="#" data-demo>View on seller site ↗</a></div></article>
+  <article class="card" data-cat="Gadgets" data-name="wired earphones with mic" data-price="249"><div class="product-visual">🎧<span class="store-pill">Flipkart</span><button class="wish" aria-label="Save product">♡</button></div><div class="card-body"><div class="cat">Gadgets</div><h3>Wired Earphones with Mic</h3><div class="price">₹249 <span class="old">₹399</span></div><div class="meta">Audio • Sample listing</div><a class="buy" href="#" data-demo>View on seller site ↗</a></div></article>
+  <article class="card" data-cat="Fashion" data-name="classic cotton t shirt" data-price="299"><div class="product-visual">👕<span class="store-pill">Meesho</span><button class="wish" aria-label="Save product">♡</button></div><div class="card-body"><div class="cat">Fashion</div><h3>Classic Cotton T-shirt</h3><div class="price">₹299 <span class="old">₹499</span></div><div class="meta">Clothing • Sample listing</div><a class="buy" href="#" data-demo>View on seller site ↗</a></div></article>
+ </section>
+ <div class="empty" id="empty">Product nahi mila. Search badal kar dekhein.</div>
+ <section class="how" id="how"><h2>Kaise kaam karta hai?</h2><div class="steps"><div class="step"><span>🔍</span><b>1. Product dhoondo</b><p>Search ya category se pasand ka item select karo.</p></div><div class="step"><span>🏷️</span><b>2. Seller check karo</b><p>Buy link se seller page par price, reviews aur delivery verify karo.</p></div><div class="step"><span>🛒</span><b>3. Seller se khareedo</b><p>Order aur payment seller ke official checkout par hota hai.</p></div></div></section>
+ <div class="disclosure"><b>Affiliate disclosure:</b> Kuch links affiliate links ho sakte hain. Eligible purchase par V Deals Store ko commission mil sakta hai, bina aapke liye extra cost ke. Abhi yeh demo website hai: sample products, prices aur buttons live shopping links nahi hain. Publish karne se pehle current details verify karein aur sirf authorised affiliate links lagayein.</div>
+</main>
+<footer id="about"><div class="footer-inner"><div><b>V DEALS STORE</b><p>Independent product-discovery website. V Deals Store Flipkart ya Meesho ki official website nahi hai. Trademarks apne respective owners ke hain.</p></div><div><b>Contact</b><p>your-email@example.com<br>Replace this with a contact email before publishing.</p></div></div></footer>
+<div class="toast" id="toast"></div>
+<script>
+const search=document.getElementById('search'),sort=document.getElementById('sort'),grid=document.getElementById('grid'),empty=document.getElementById('empty'),count=document.getElementById('count');let category='All';
+const cards=[...grid.querySelectorAll('.card')],filters=[...document.querySelectorAll('.filter')];
+function render(){const q=search.value.trim().toLowerCase();let list=cards.filter(c=>(category==='All'||c.dataset.cat===category)&&c.dataset.name.includes(q));if(sort.value==='low')list.sort((a,b)=>+a.dataset.price- +b.dataset.price);if(sort.value==='high')list.sort((a,b)=>+b.dataset.price- +a.dataset.price);cards.forEach(c=>c.style.display='none');list.forEach(c=>{c.style.display='';grid.appendChild(c)});count.textContent=list.length+' products';empty.style.display=list.length?'none':'block'}
+search.addEventListener('input',render);sort.addEventListener('change',render);filters.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.cat;filters.forEach(x=>x.classList.toggle('active',x===b));render()}));
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2600)}
+document.querySelectorAll('[data-demo]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();toast('Demo link hai — approved seller/affiliate URL add karna baaki hai.')}));document.querySelectorAll('.wish').forEach(b=>b.addEventListener('click',()=>{b.textContent=b.textContent==='♡'?'♥':'♡';toast(b.textContent==='♥'?'Saved in this preview':'Removed from saved preview')}));
+</script>
+</body>
+</html>
